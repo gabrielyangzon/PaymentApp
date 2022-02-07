@@ -1,0 +1,68 @@
+<form (ngSubmit)="onSubmitClicked()" class="card p-4">
+<h5 class="color-red">{{errorMessage}}</h5>
+    <input 
+        type="hidden" 
+        name="paymentDetailId" 
+        [(ngModel)]="formData.paymentDetailId">
+
+        <div class="row mb-1">
+            
+            <div class="form-group col">
+                <label>Card Owner Name</label>
+                <input 
+                required
+                    type="text" 
+                    class="form-control"
+                    name="cardOwnerName" 
+                    [(ngModel)]="formData.cardOwnerName">
+            </div>
+       </div>
+
+       <div class="row mb-1">
+            <div class="form-group col">
+                <label>Card Number</label>
+                <input 
+                required
+                    type="text" 
+                    class="form-control"
+                    name="cardNumber" 
+                    [(ngModel)]="formData.cardNumber">
+            </div>
+        </div>
+ 
+    <div class="row mb-3">
+        <div class="form-group col">
+            <label>Expiration Date</label>
+            <input 
+            required
+                type="text" 
+                class="form-control"
+                name="expirationDate" 
+                [(ngModel)]="formData.expirationDate">
+        </div>
+
+        <div class="form-group col">
+            <label>Security Code</label>
+            <input 
+            required
+                type="text" 
+                class="form-control"
+                name="securityCode" 
+                [(ngModel)]="formData.securityCode">
+        
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+         <button class="btn btn-primary">Save</button>
+        </div>
+    </div>
+</form> 
+
+{{formData.securityCode}}
+
+
+
+
+
