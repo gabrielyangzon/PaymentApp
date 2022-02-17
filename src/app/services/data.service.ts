@@ -30,5 +30,12 @@ export class DataService {
       this.BASE_URL + "PaymentDetails" ,
       httpOptions).pipe()
   }
+
+  deletePayment(id : number) : Observable<boolean> {
+
+    this.http.delete(this.BASE_URL + "PaymentDetails/"+id , httpOptions).pipe()
+
+    return of(false)
+  }
   
 }

@@ -16,14 +16,17 @@ export class PaymentDetailsComponent implements OnInit {
   public paymentDetails : PaymentDetail[]
   
   ngOnInit(): void {
-   this.service.getPayments().subscribe(res => {
-    
-   
-    this.paymentDetails = res
-   }
-    );
- 
+   this.service.getPayments().subscribe(result => this.paymentDetails = result)
+  }
 
+
+  deletePayment(id :number){
+    console.log(id)
+  }
+
+
+  onSubmit(){
+      alert("Hello world")
   }
 
 }

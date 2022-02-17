@@ -1,6 +1,7 @@
-<p>payment-details works!</p>
-<div *ngFor="let payment of paymentDetails">
-    <p>{{payment.cardOwnerName}}</p>
-    <p>{{payment.cardNumber}}</p>
+
+<div class="d-flex mt-5 justify-content-around">
+<app-payment-detail-form (onSubmitClickHandler)="onSubmit()"></app-payment-detail-form>
+<app-payment-detail-table 
+    [data]="this.paymentDetails" 
+    (onDeleteClick)="deletePayment($event)"></app-payment-detail-table>
 </div>
-<!-- <app-payment-detail-form></app-payment-detail-form> -->

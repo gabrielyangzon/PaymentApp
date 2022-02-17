@@ -13,9 +13,6 @@ export class AppComponent {
  */
 constructor() {}
 
-  onClickSubmit(e : any){
-   
-    alert("Hello world")
 
-  }
+  
 }

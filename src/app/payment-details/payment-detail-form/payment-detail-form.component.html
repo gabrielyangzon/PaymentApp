@@ -14,6 +14,7 @@
                     type="text" 
                     class="form-control"
                     name="cardOwnerName" 
+                    placeholder="Full Name"
                     [(ngModel)]="formData.cardOwnerName">
             </div>
        </div>
@@ -25,31 +26,37 @@
                 required
                     type="text" 
                     class="form-control"
-                    name="cardNumber" 
+                    name="cardNumber"
+                    
+                    placeholder="16 Digit Card Number" 
                     [(ngModel)]="formData.cardNumber">
             </div>
         </div>
  
     <div class="row mb-3">
-        <div class="form-group col">
-            <label>Expiration Date</label>
-            <input 
-            required
-                type="text" 
-                class="form-control"
-                name="expirationDate" 
-                [(ngModel)]="formData.expirationDate">
-        </div>
+        
 
         <div class="form-group col">
             <label>Security Code</label>
             <input 
-            required
-                type="text" 
+                required
+                type="password" 
                 class="form-control"
                 name="securityCode" 
+                placeholder="Security code"
                 [(ngModel)]="formData.securityCode">
         
+        </div>
+
+        <div class="form-group col">
+            <label>Expiration Date</label>
+            <input 
+                required 
+                type="text" 
+                class="form-control" 
+                name="expirationDate"
+                placeholder="mm/yy"
+                [(ngModel)]="formData.expirationDate">
         </div>
     </div>
 
@@ -60,7 +67,6 @@
     </div>
 </form> 
 
-{{formData.securityCode}}
 
 
 

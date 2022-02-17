@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col" hidden>id</th>
+            <th scope="col">Card Owner</th>
+            <th scope="col">Card Number</th>
+            <th scope="col">Expiration Date</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let detail of data">
+            <td hidden>{{detail.paymentDetailId}}</td>
+            <td>{{detail.cardOwnerName}}</td>
+            <td>{{detail.cardNumber}}</td>
+            <td>{{detail.expirationDate}}</td>
+            <td> <span 
+                class="material-icons" 
+                style="cursor:pointer"  
+                (click)="onDeleteClickHandler(detail.paymentDetailId)">delete</span></td>
+        </tr>
+    </tbody>
+</table>

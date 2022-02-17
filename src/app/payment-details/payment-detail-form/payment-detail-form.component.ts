@@ -39,7 +39,7 @@ export class PaymentDetailFormComponent implements OnInit {
 
 
     if(this.errorMessage === ""){
-    this.onSubmitClickHandler.emit(this.formData)
+         this.onSubmitClickHandler.emit(this.formData)
     }
 
 
